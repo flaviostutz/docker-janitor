@@ -9,6 +9,7 @@ services:
     environment:
       - SLEEP_TIME=86400
       - UNUSED_TIME=24h
+      - SKIP_RANDOM_BACKOFF=false
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 

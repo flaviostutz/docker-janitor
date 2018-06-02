@@ -10,4 +10,6 @@ ENV SLEEP_TIME 86400
 #time of unused resources to be pruned
 ENV UNUSED_TIME 24h
 
+ENV SKIP_RANDOM_BACKOFF false
+
 CMD [ "/run.sh" ]
