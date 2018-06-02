@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  janitor:
+    image: flaviostutz/docker-janitor
+    build: .
+    deploy:
+      mode: global
+    environment:
+      - SLEEP_TIME=86400
+      - UNUSED_TIME=24h
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
