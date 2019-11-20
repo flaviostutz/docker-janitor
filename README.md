@@ -30,3 +30,4 @@ services:
 * SLEEP_TIME: time in seconds between janitor script runs (default: 86400 - once a day)
 * SKIP_RANDOM_BACKOFF: On the first run, the container will sleep randomly between 0 and SLEEP_TIME before entering the loop (random backoff) so that the hosts won't run this script at the same time, possibly causing unecessary global pressure on the cluster (default: false)
 * UNUSED_TIME: min age of resource creation before being pruned (default: 24h).
+* PRUNE_VOLUMES: if 'true', remove unused volumes too
