@@ -7,10 +7,13 @@ services:
     deploy:
       mode: global
     environment:
-      - SLEEP_TIME=86400
+      - TIME_BETWEEN_RUNS=86400
       - UNUSED_TIME=24h
-      - SKIP_RANDOM_BACKOFF=false
+      - SKIP_RANDOM_BACKOFF=true
       - RUN_ON_STARTUP=false
+      - PRUNE_VOLUMES=true
+      - HOUR_OF_DAY_START=21
+      - HOUR_OF_DAY_END=22
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 

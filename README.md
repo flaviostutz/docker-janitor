@@ -27,8 +27,10 @@ services:
 ```docker stack deploy --compose-file docker-compose.yml janitor```
 
 ## ENV
-* SLEEP_TIME: time in seconds between janitor script runs (default: 86400 - once a day)
+* TIME_BETWEEN_RUNS: time in seconds between janitor script runs (default: 86400 - once a day)
 * SKIP_RANDOM_BACKOFF: On the first run, the container will sleep randomly between 0 and SLEEP_TIME before entering the loop (random backoff) so that the hosts won't run this script at the same time, possibly causing unecessary global pressure on the cluster (default: false)
 * UNUSED_TIME: min age of resource creation before being pruned (default: 24h).
-* PRUNE_VOLUMES: if 'true', remove unused volumes too. defaults to false
-* RUN_ON_STARTUP: if 'true', run system prune when starting Janitor. defaults to false.
+* PRUNE_VOLUMES: if 'true', remove unused volumes too (default: false)
+* RUN_ON_STARTUP: if 'true', run system prune when starting Janitor (default: false)
+* HOUR_OF_DAY_START: start hour of day in which Janitor is enabled to run (default: 0)
+* HOUR_OF_DAY_END: end hour of day in which Janitor is enabled to run (default: 23)
