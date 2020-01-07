@@ -22,7 +22,7 @@ services:
       - SLEEP_TIME=86400
       - UNUSED_TIME=24h
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock```
+      - /var/run/docker.sock:/var/run/docker.sock
 ```
 ```docker stack deploy --compose-file docker-compose.yml janitor```
 
