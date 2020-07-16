@@ -1,4 +1,8 @@
 # docker-janitor
+
+[<img src="https://img.shields.io/docker/pulls/flaviostutz/docker-janitor"/>](https://hub.docker.com/r/flaviostutz/docker-janitor)
+[<img src="https://img.shields.io/docker/automated/flaviostutz/docker-janitor"/>](https://hub.docker.com/r/flaviostutz/docker-janitor)
+
 This containers performs continuous cleanups on unused Docker resources on the host.
 
 Basically it performs ```docker system prune --all``` from time to time.
