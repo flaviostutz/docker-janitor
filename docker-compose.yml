@@ -12,8 +12,8 @@ services:
       - SKIP_RANDOM_BACKOFF=true
       - RUN_ON_STARTUP=false
       - PRUNE_VOLUMES=true
-      - HOUR_OF_DAY_START=21
-      - HOUR_OF_DAY_END=22
+      - HOUR_OF_DAY_START=20
+      - HOUR_OF_DAY_END=23
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
