@@ -1,6 +1,6 @@
 #!/bin/sh
 
-FILTERS="--filter until=${UNUSED_TIME}"
+FILTERS="--filter \"until=${UNUSED_TIME}\""
 
 if [ -n "$EXCLUDE_RESOURCES" ]; then
     oldIFS="$IFS"
@@ -8,7 +8,7 @@ if [ -n "$EXCLUDE_RESOURCES" ]; then
     set -- $EXCLUDE_RESOURCES
     for resource in "$@"; do
         if [ -n "$resource" ]; then
-            FILTERS="$FILTERS --filter label!=${resource}"
+            FILTERS="$FILTERS --filter \"label!=${resource}\""
         fi
     done
 
