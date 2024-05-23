@@ -26,7 +26,8 @@ do
 
             if [ "$RUN_ON_STARTUP" == "true" ]; then
                 echo "Running system prune on startup..."
-                docker system prune --all $VOLUMES --force --filter until="${UNUSED_TIME}"
+                echo "$(date) Calling docker system prune --all $VOLUMES --force $FILTERS"
+                docker system prune --all $VOLUMES --force $FILTERS
             fi
 
             RANDOM_SLEEP_TIME=$((RANDOM % TIME_BETWEEN_RUNS))
