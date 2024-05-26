@@ -14,6 +14,7 @@ services:
       - PRUNE_VOLUMES=true
       - HOUR_OF_DAY_START=20
       - HOUR_OF_DAY_END=23
+      - EXCLUDE_RESOURCES=
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
