@@ -25,6 +25,7 @@ services:
     environment:
       - SLEEP_TIME=86400
       - UNUSED_TIME=24h
+      - EXCLUDE_RESOURCES="do-not-remove"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 ```
@@ -38,3 +39,4 @@ services:
 * RUN_ON_STARTUP: if 'true', run system prune when starting Janitor (default: false)
 * HOUR_OF_DAY_START: start hour of day in which Janitor is enabled to run (default: 0)
 * HOUR_OF_DAY_END: end hour of day in which Janitor is enabled to run (default: 23)
+* EXCLUDE_RESOURCES: comma seperated string contains resource labels to be excluded from removal by Janitor.
